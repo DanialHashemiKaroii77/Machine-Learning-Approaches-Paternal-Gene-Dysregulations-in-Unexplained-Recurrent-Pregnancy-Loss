@@ -67,8 +67,9 @@ tT$`Gene.symbol` <- rownames(tT)
 tT <- tT[, c("Gene.symbol", "logFC", "P.Value", "adj.P.Val")]
 rownames(tT) <- NULL
 
-write_tsv(tT, "Results/differentialExpressionAnalysis/topTable.tsv")
-write_csv(tT, "Results/differentialExpressionAnalysis/topTable.csv")
+write_tsv(tT, " ")
+write_csv(tT, " ")
 
 updown(tT)
+
 ##########################################
