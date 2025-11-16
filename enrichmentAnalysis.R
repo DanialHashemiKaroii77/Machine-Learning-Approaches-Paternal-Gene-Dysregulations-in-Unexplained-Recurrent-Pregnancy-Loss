@@ -8,7 +8,7 @@ library(org.Hs.eg.db)
 # Set the current working directory to the project path
 setwd(project_path)
 
-symbol <- fread("Results/differentialExpressionAnalysis/updown.txt", header = F)$V1
+symbol <- fread(" ", header = F)$V1
 
 entrezid <- mapIds(x = org.Hs.eg.db, keys = symbol, column = "ENTREZID", keytype = "SYMBOL") %>% 
   as.data.frame() %>% na.omit()
@@ -51,4 +51,5 @@ dotplot(ekegg,
         color = "qvalue"
         )
 dev.off()
+
 ##################################
